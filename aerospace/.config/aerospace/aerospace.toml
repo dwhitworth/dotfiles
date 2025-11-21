@@ -65,13 +65,21 @@ preset = 'qwerty'
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+
 [gaps]
 inner.horizontal = 8
-inner.vertical = 8
-outer.bottom = 5
-outer.top = [{ monitor.main = 10}, 10]
-outer.right = 5
-outer.left = 5
+inner.vertical =   8
+outer.left =       5
+outer.right =      5
+outer.bottom =     5
+
+# This array syntax says: 
+# 1. If monitor name starts with "built-in", use 10px.
+# 2. For ALL other monitors (the default), use 50px.
+outer.top = [
+    { monitor."^built-in.*" = 10 }, 
+    40
+]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -104,16 +112,17 @@ outer.left = 5
 # '''
 
 # App shortcuts
-alt-b = 'exec-and-forget open -a /Applications/Brave\ Browser.app'
-alt-c = 'exec-and-forget open -a /Applications/Cursor.app'
+alt-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app'
+alt-c = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
 alt-i = 'exec-and-forget open -a /Applications/Ghostty.app'
-alt-s = 'exec-and-forget open -a /Applications/Slack.app'
+alt-s = 'exec-and-forget open -a /Applications/Safari.app'
 alt-d = 'exec-and-forget open -a /Applications/Discord.app'
 alt-p = 'exec-and-forget open -a /Applications/Adobe\ Premiere\ Pro\ 2024/Adobe\ Premiere\ Pro\ 2024.app/'
-alt-o = 'exec-and-forget open -a /Applications/OBS.app/'
+alt-o = 'exec-and-forget open -a /Applications/Microsoft\ Outlook.app/'
 alt-w = 'exec-and-forget open -a /Applications/Obsidian.app'
 alt-n = 'exec-and-forget open -a /Applications/Notion.app'
 alt-a = 'exec-and-forget open -a /Applications/ChatGPT.app'
+alt-t = 'exec-and-forget open -b com.microsoft.teams2'
 alt-shift-r = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
 
 # See: https://nikitabobko.github.ioeAeroSpace/commands#layout

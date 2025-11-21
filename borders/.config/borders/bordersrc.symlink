@@ -1,0 +1,13 @@
+#!/bin/bash
+
+options=(
+  style=round
+  width=6.0 # Thick enough to be clear, not comically large
+  hidpi=on
+  active_color=0xff89b4fa     # Catppuccin Blue (Matches your likely Ghostty theme)
+  inactive_color=0x66313244   # Muted Grey with transparency
+  background_color=0x301e1e2e # Dark background to blend with rounded corners
+  blur_radius=25
+)
+
+borders "${options[@]}"
