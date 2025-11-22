@@ -1,6 +1,6 @@
 # A simple sketchybar config for aerospace users to get started with
 # Not too different from the base starting config!
-
+export PATH="$PATH:/opt/homebrew/bin"
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items" 
 ##### Bar Appearance #####
