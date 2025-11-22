@@ -13,6 +13,7 @@ after-startup-command = []
 
 # Start AeroSpace at login
 start-at-login = true 
+after-startup-command = ['exec-and-forget sketchybar --reload']
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
