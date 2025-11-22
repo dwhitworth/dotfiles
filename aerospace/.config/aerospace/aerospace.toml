@@ -9,10 +9,12 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
-
+# CrowdStrike Bypass: Use nohup and backgrounding to prevent EDR freezes
+after-startup-command = [
+    'exec-and-forget nohup /bin/bash -c "/opt/homebrew/bin/sketchybar --reload" > /dev/null 2>&1 &'
+]
 # Start AeroSpace at login
 start-at-login = true 
-after-startup-command = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -51,8 +53,11 @@ automatically-unhide-macos-hidden-apps = true
 #
 #
 # Notify Sketchybar about workspace change and update icons
-exec-on-workspace-change = ['/bin/bash', '-c', '/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE && ~/.config/sketchybar/plugins/update_workspace_icons.sh']
-
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    'nohup /opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE > /dev/null 2>&1 &'
+]
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -124,6 +129,11 @@ alt-n = 'exec-and-forget open -a /Applications/Notion.app'
 alt-a = 'exec-and-forget open -a /Applications/ChatGPT.app'
 alt-t = 'exec-and-forget open -b com.microsoft.teams2'
 alt-shift-r = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
+alt-shift-q = [
+    'close',
+    'exec-and-forget nohup /bin/bash -c "/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change" > /dev/null 2>&1 &'
+]
+alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app'
 
 # See: https://nikitabobko.github.ioeAeroSpace/commands#layout
 alt-e = 'layout tiles horizontal vertical'
