@@ -134,7 +134,7 @@ alt-shift-q = [
     'exec-and-forget nohup /bin/bash -c "/opt/homebrew/bin/sketchybar --trigger aerospace_workspace_change" > /dev/null 2>&1 &'
 ]
 alt-enter = 'exec-and-forget open -a /Applications/Ghostty.app'
-
+alt-space = 'layout floating tiling'
 # See: https://nikitabobko.github.ioeAeroSpace/commands#layout
 alt-e = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
