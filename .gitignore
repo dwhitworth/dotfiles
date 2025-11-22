@@ -1,1 +1,30 @@
+# --- System Junk ---
 .DS_Store
+.Trash/
+
+# --- SHELL HISTORY (CRITICAL) ---
+.zsh_history
+.bash_history
+.history
+*.history
+
+# --- SECURITY / KEYS ---
+.ssh/
+.aws/
+.gnupg/
+.kube/
+.netrc
+.npmrc
+_netrc
+id_rsa
+id_ed25519
+known_hosts
+
+# --- PRIVATE CONFIGS ---
+*.local
+.secrets
+.env
+.env.local
+
+# --- APP SPECIFIC ---
+Library/  
