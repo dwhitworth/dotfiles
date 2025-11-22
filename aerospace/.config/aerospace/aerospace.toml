@@ -129,46 +129,46 @@ alt-shift-l = ['join-with right', 'mode main']
 # --- WINDOW RULES (Workspace Assignment) ---
 
 # WS 1: Browsers
-[[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = ['move-node-to-workspace 1']
+# [[on-window-detected]]
+# if.app-id = 'com.google.Chrome'
+# run = ['move-node-to-workspace 1']
 
-[[on-window-detected]]
-if.app-id = 'com.apple.Safari'
-run = ['move-node-to-workspace 1']
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Safari'
+# run = ['move-node-to-workspace 1']
 
 # WS 2: Terminal
-[[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace 2']
+# [[on-window-detected]]
+# if.app-id = 'com.mitchellh.ghostty'
+# run = ['move-node-to-workspace 2']
 
 # WS 3: Code
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
-run = ['move-node-to-workspace 3']
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.VSCode'
+# run = ['move-node-to-workspace 3']
 
 # WS 4: Media / Background
-[[on-window-detected]]
-if.app-id = 'com.apple.Music'
-run = ['move-node-to-workspace 4']
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Music'
+# run = ['move-node-to-workspace 4']
 
 # WS 5: Comms
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = ['move-node-to-workspace 5']
+# [[on-window-detected]]
+# if.app-id = 'com.tinyspeck.slackmacgap'
+# run = ['move-node-to-workspace 5']
 
-[[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
-run = ['move-node-to-workspace 5']
+# [[on-window-detected]]
+# if.app-id = 'com.hnc.Discord'
+# run = ['move-node-to-workspace 5']
 
 # WS 6: Office / Secondary Monitor
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = ['move-node-to-workspace 6']
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.Outlook'
+# run = ['move-node-to-workspace 6']
 
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = ['move-node-to-workspace 6']
+# [[on-window-detected]]
+# if.app-id = 'com.microsoft.teams2'
+# run = ['move-node-to-workspace 6']
 
 
 # --- FLOATING RULES (Quality of Life) ---
