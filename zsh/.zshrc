@@ -50,3 +50,6 @@ elif [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
+
+# Added by Antigravity
+export PATH="/Users/dwhitworth/.antigravity/antigravity/bin:$PATH"
