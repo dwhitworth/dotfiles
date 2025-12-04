@@ -1,12 +1,1 @@
 theme = catppuccin-mocha
-font-size = 12
-background-blur-radius = 20
-mouse-hide-while-typing = true
-window-decoration = true
-macos-option-as-alt = true
-
-# Vim-style Split Navigation
-keybind = cmd+h=goto_split:left
-keybind = cmd+j=goto_split:bottom
-keybind = cmd+k=goto_split:top
-keybind = cmd+l=goto_split:right
