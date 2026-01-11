@@ -51,5 +51,30 @@ elif [ -d "$HOME/.nvm" ]; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 fi
 
+# --- DNS & Networking Utils ---
+
+# Flush DNS Cache (macOS)
+alias dnsflush="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder; echo '✅ DNS cache flushed.'"
+
+# Set DNS to Cloudflare (1.1.1.1)
+# Note: 'Wi-Fi' is the default interface name, change if you use Ethernet/USB-C
+dnson() {
+    local interface="Wi-Fi"
+    sudo networksetup -setdnsservers "$interface" 1.1.1.1 1.0.0.1
+    echo "✅ DNS set to Cloudflare (1.1.1.1) on $interface"
+    dnsflush
+}
+
+# Reset DNS to Automatic (DHCP from ISP)
+dnsoff() {
+    local interface="Wi-Fi"
+    sudo networksetup -setdnsservers "$interface" "Empty"
+    echo "🔄 DNS reset to Automatic (ISP) on $interface"
+    dnsflush
+}
+
+# Check current DNS settings
+alias dnscheck="networksetup -getdnsservers Wi-Fi"
+
 # Added by Antigravity
 export PATH="/Users/dwhitworth/.antigravity/antigravity/bin:$PATH"
