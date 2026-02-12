@@ -43,6 +43,8 @@ alias lt='lsd --tree'
 # 1. Check for Mise (Personal Machine)
 if command -v mise &> /dev/null; then
   eval "$(mise activate zsh)"
+  # Add this line to ensure sbt and other tools find the JVM
+  export MISE_JAVA_HOME=1
 
 # 2. Check for NVM (Work Machine)
 elif [ -d "$HOME/.nvm" ]; then
@@ -66,7 +68,7 @@ dnson() {
 }
 
 # Reset DNS to Automatic (DHCP from ISP)
-dnsoff() {
+dnsoff() 
     local interface="Wi-Fi"
     sudo networksetup -setdnsservers "$interface" "Empty"
     echo "🔄 DNS reset to Automatic (ISP) on $interface"
