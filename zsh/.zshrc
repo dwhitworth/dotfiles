@@ -68,7 +68,7 @@ dnson() {
 }
 
 # Reset DNS to Automatic (DHCP from ISP)
-dnsoff() 
+dnsoff() {
     local interface="Wi-Fi"
     sudo networksetup -setdnsservers "$interface" "Empty"
     echo "🔄 DNS reset to Automatic (ISP) on $interface"
