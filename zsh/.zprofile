@@ -1,4 +1,2 @@
-
-# >>> coursier install directory >>>
-export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
-# <<< coursier install directory <<<
+# Homebrew (Apple Silicon) — puts brew + everything it installs on PATH for login shells
+eval "$(/opt/homebrew/bin/brew shellenv)"

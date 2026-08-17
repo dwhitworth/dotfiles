@@ -12,12 +12,6 @@ Session.vim
 tags
 !tags/
 
-# --- LazyVim / PHP Tooling ---
-.phpactor.json
-.php_cs.cache
-.php-cs-fixer.cache
-.intelephense
-
 # --- Node / Web Dev ---
 npm-debug.log*
 yarn-debug.log*
