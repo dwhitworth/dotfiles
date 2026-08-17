@@ -79,4 +79,8 @@ dnsoff() {
 alias dnscheck="networksetup -getdnsservers Wi-Fi"
 
 # Added by Antigravity
-export PATH="/Users/dwhitworth/.antigravity/antigravity/bin:$PATH"
+export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
+
+# --- Machine-local overrides (work aliases, tokens, machine-specific PATHs) ---
+# Not tracked in git (see .gitignore: *.local). Create ~/.zshrc.local per machine.
+[[ ! -f ~/.zshrc.local ]] || source ~/.zshrc.local
