@@ -81,6 +81,19 @@ alias dnscheck="networksetup -getdnsservers Wi-Fi"
 # Added by Antigravity
 export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 
+# --- Editor ---
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+# --- Aliases ---
+command -v bat &>/dev/null && alias cat='bat'
+alias bubu='brew update && brew upgrade'
+alias bubuc='brew update && brew upgrade && brew cleanup'
+
+# --- zsh-autocomplete (manual plugin: git clone into ~/.zsh/plugins) ---
+[[ -f ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]] && \
+  source ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # --- Machine-local overrides (work aliases, tokens, machine-specific PATHs) ---
 # Not tracked in git (see .gitignore: *.local). Create ~/.zshrc.local per machine.
 [[ ! -f ~/.zshrc.local ]] || source ~/.zshrc.local
