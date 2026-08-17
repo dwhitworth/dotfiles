@@ -21,6 +21,12 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh-autosuggestions' async mode forks a background worker per keystroke and
+# leaks a file descriptor pair on teardown (zsh-users/zsh-autosuggestions#815).
+# Over a long session this exhausts the fd limit and corrupts zle input
+# handling (double-typed keys, "bad file descriptor" errors). Force sync mode.
+unset ZSH_AUTOSUGGEST_USE_ASYNC
+
 # User configuration
 export PATH="$HOME/.local/bin:$PATH"
 
