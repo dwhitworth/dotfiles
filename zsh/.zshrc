@@ -44,6 +44,10 @@ alias la='lsd -a'
 alias lla='lsd -la'
 alias lt='lsd --tree'
 
+# --- Aliases ---
+command -v bat &>/dev/null && alias cat='bat'
+alias bubu='brew update && brew upgrade'
+alias bubuc='brew update && brew upgrade && brew cleanup'
 # --- DYNAMIC NODE MANAGER LOADING ---
 
 # 1. Check for Mise (Personal Machine)
@@ -91,10 +95,6 @@ export PATH="$HOME/.antigravity/antigravity/bin:$PATH"
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-# --- Aliases ---
-command -v bat &>/dev/null && alias cat='bat'
-alias bubu='brew update && brew upgrade'
-alias bubuc='brew update && brew upgrade && brew cleanup'
 
 # --- zsh-autocomplete (manual plugin: git clone into ~/.zsh/plugins) ---
 [[ -f ~/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh ]] && \
@@ -103,3 +103,6 @@ alias bubuc='brew update && brew upgrade && brew cleanup'
 # --- Machine-local overrides (work aliases, tokens, machine-specific PATHs) ---
 # Not tracked in git (see .gitignore: *.local). Create ~/.zshrc.local per machine.
 [[ ! -f ~/.zshrc.local ]] || source ~/.zshrc.local
+
+# Pi
+export PATH="/Users/donovanwhitworth/.local/share/mise/installs/node/24.19.0/bin:$PATH"

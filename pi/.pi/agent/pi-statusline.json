@@ -1,0 +1,15 @@
+{
+	"palettePreset": "tokyo-night",
+	"density": "compact",
+	"separator": "none",
+	"segments": [
+		"model",
+		"thinking",
+		"cwd",
+		"branch",
+		"tools",
+		"context",
+		"cost",
+		"time"
+	]
+}

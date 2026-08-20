@@ -28,3 +28,11 @@ known_hosts
 
 # --- APP SPECIFIC ---
 Library/  
+
+# --- PI CODING AGENT (only track curated configs; never secrets/caches) ---
+.pi/agent/auth.json
+.pi/agent/*cache*.json
+.pi/agent/models-store.json
+.pi/agent/trust.json
+.pi/agent/sessions/
+.pi/agent/settings.json
